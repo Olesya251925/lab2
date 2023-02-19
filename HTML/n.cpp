@@ -6,7 +6,7 @@ using System;
 using System.Reflection.Emit;
 
 namespace ConsoleApp{
-  class HTML {
+  class HTML : LabTwo {
     public string DateCreation { get; set; }
     public string DateChange { get; set; }
     public string Size { get; set; }
@@ -15,7 +15,7 @@ namespace ConsoleApp{
     public HTML(
       string Name,
       string Author,
-      string[] Keywords,
+      string [] Keywords,
       string Subjects,
       string Path,
       string DateCreation,
