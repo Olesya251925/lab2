@@ -60,7 +60,7 @@ namespace ConsoleApp{
             ValueParameter = "";
 
             if (this.Size == "") {
-              ParameterValue = "Не определен!";
+              ParameterValue = "Не существует";
             } else {
                 ParameterValue = this.Size;
             }
@@ -68,7 +68,7 @@ namespace ConsoleApp{
             ParameterValue = "";
 
             if (this.Password == "") {
-              ParameterValue = "Не существует!";
+              ParameterValue = "Не существует";
             } else {
               ParameterValue = this.Password;
             }
