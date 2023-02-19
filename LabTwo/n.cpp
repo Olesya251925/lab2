@@ -19,43 +19,26 @@ namespace ConsoleApp{
     public LabTwo(string Name) => this.Name = Name;
     public LabTwo () { }
 
-    public void SetValues(
-      string Name,
-      string Author,
-      string [] Keywords,
-      string Subjects,
-      string Path
-    ) {
-	this.Name = Name;
-	this.Author = Author;
-	this.Keywords = Keywords;
-	this.Subjects = Subjects;
-	this.Path = Path;
+    protected virtual void Print(string Parameter, string ParameterValue) {
+    }
+
+    public virtual void PrintValues() {
+      string ValueParameter = "";
+
+      foreach (string ElDocum in Keywords) { //foreach выполняет итерацию по элементам 
+      if (ValueParameter == "") {
+        ValueParameter = ElDocum;
+      } else {
+          ValueParameter += ", " + ElDocum;
+        }
       }
 
-      protected virtual void Print(string Parameter, string ParameterValue) {
-        Console.Write(Parameter);
-        Console.ForegroundColor = ConsoleColor.DarkGreen;
-        Console.WriteLine(ValueParameter);
-      }
-
-     public virtual void PrintValues() {
-       string ValueParameter = "";
-
-       foreach (string el in Keywords) {
-         if (ValueParameter == "") {
-           ValueParameter = el;
-         } else {
-             ValueParameter += ", " + el;
-           }
-       }
-
-       Print("Имя: ", Name);
-       Print("Автор: ", Author);
-       Print("Ключевые слова: ", ValueParameter);
-       Print("Тематика: ", Subjects);
-       Print("Путь к файлу: ", Path);
-       ValueParameter = "";
+      Print("Имя: ", Name);
+      Print("Автор: ", Author);
+      Print("Ключевые слова: ", ValueParameter);
+      Print("Тематика: ", Subjects);
+      Print("Путь к файлу: ", Path);
+      ValueParameter = "";
     }
   }
 }
