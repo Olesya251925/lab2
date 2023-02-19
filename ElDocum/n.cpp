@@ -5,13 +5,13 @@ using System;
 namespace ConsoleApp {
   internal class Program {
     private static void DocumentOutput (ElDocum) {
-      Eldoc.PrintValues();
+      Eldocum.PrintValues();
     }
     static void Main(string[] args) {
       ElDocum Information = new ElDocum {
         Name = "Игры, в которые играют люди",
         Authors = "Эрик Берн",
-        Theme = "Психология",
+        Subject = "Психология",
         PathToFaile = "https://www.litres.ru/erik",
         KeyWords = new string[] { "Игры; ", "Люди; },
       };
