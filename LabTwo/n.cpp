@@ -14,7 +14,7 @@ namespace ConsoleApp{
 
     public LabTwo(string Name, string Author, string[] Keywords, string Subjects, string Path){
       this.SetValues(Name, Author, Keywords, Subjects, Path);
-	}
+    }
 
     public LabTwo(string Name) => this.Name = Name;
     public LabTwo () { }
