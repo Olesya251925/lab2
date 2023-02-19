@@ -40,22 +40,22 @@ namespace ConsoleApp{
       }
 
      public virtual void PrintValues() {
-     string ValueParameter = "";
+       string ValueParameter = "";
 
-     foreach (string el in Keywords) {
-       if (ValueParameter == "") {
-         ValueParameter = el;
-       } else {
-           ValueParameter += ", " + el;
-         }
-     }
+       foreach (string el in Keywords) {
+         if (ValueParameter == "") {
+           ValueParameter = el;
+         } else {
+             ValueParameter += ", " + el;
+           }
+       }
 
-      Print("Имя: ", Name);
-      Print("Автор: ", Author);
-      Print("Ключевые слова: ", ValueParameter);
-      Print("Тематика: ", Subjects);
-      Print("Путь к файлу: ", Path);
-      ValueParameter = "";
+       Print("Имя: ", Name);
+       Print("Автор: ", Author);
+       Print("Ключевые слова: ", ValueParameter);
+       Print("Тематика: ", Subjects);
+       Print("Путь к файлу: ", Path);
+       ValueParameter = "";
     }
   }
 }
