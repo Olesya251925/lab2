@@ -23,22 +23,11 @@ namespace ConsoleApp{
     }
 
     public virtual void PrintValues() {
-      string ValueParameter = "";
-
-      foreach (string ElDocum in Keywords) { //foreach выполняет итерацию по элементам 
-      if (ValueParameter == "") {
-        ValueParameter = ElDocum;
-      } else {
-          ValueParameter += ", " + ElDocum;
-        }
-      }
-
       Print("Имя: ", Name);
       Print("Автор: ", Author);
       Print("Ключевые слова: ", ValueParameter);
       Print("Тематика: ", Subjects);
       Print("Путь к файлу: ", Path);
-      ValueParameter = "";
     }
   }
 }
