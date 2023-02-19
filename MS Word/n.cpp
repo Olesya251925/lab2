@@ -6,7 +6,7 @@ using System;
 using System.Reflection.Emit;
 
 namespace ConsoleApp{
-  class MS Word : LabTwo {
+  class MS Word : ElDocum {
     public string LetterSize { get; set; }
     public int LetterFont { get; set; }
     public string ElapsedTime { get; set; }
@@ -17,9 +17,7 @@ namespace ConsoleApp{
 
     public MS Word(string Name) : base(Name) { }
 
-    public override void PrintValues() { //override предоставляет новую реализацию метода, унаследованного от базового класса
-      string ParameterValue = "";
-
+    public override void PrintValues() { 
        Console.Write("Тип файла: ");
        Console.WriteLine("DOC");
        Console.WriteLine($"Размер букв: {LetterSize}\nШрифт букв: {LetterFont}\nЗатраченное время: {ElapsedTime}");
