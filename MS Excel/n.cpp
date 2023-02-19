@@ -6,7 +6,7 @@ using System;
 using System.Reflection.Emit;
 
 namespace ConsoleApp{
-  class MS Excel : LabTwo {
+  class MS Excel : ElDocum {
     public int NumberColumns { get; set; }
     public int NumberRows { get; set; }
     public Excel() { }
@@ -17,8 +17,6 @@ namespace ConsoleApp{
     public MS Excel(string Name) : base(Name) { }
 
     public override void ValueParameter() {
-      string ValueParameter = "";
-
       Console.Write("Тип файла: ");
       Console.WriteLine("MS Excel");
       Console.WriteLine($"Количество Столбцов: {NumberColumns}\nКоличество Строк: {NumberRows}");
