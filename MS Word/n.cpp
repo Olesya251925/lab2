@@ -19,12 +19,12 @@ namespace ConsoleApp{
       string [] Keywords,
       string Subjects,
       string Path,
-      string DateOfCreation,
-      string DateOfChange,
+      string DateCreation,
+      string DateChange,
       string Size
     ) : base(Name, Author, Keywords, Subjects, Path) {
-          this.DateOfCreation = DateCreation;
-          this.DateOfChange = DateChange;
+          this.DateCreation = DateCreation;
+          this.DateChange = DateChange;
           this.Size = Size;
         }
 
@@ -70,7 +70,6 @@ namespace ConsoleApp{
             } else {
               ParameterValue = this.Password;
             }
-
             base.Print("Введите пароль: ", ParameterValue);
         }
     }
