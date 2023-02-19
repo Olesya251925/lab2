@@ -10,7 +10,6 @@ namespace ConsoleApp{
     public string DateCreation { get; set; }
     public string DateChange { get; set; }
     public string Size { get; set; }
-    public string Password { get; set; }
     public Excel() { }
 
     public MS Excel(
@@ -21,13 +20,11 @@ namespace ConsoleApp{
       string Path,
       string DateCreation,
       string DateChange,
-      string Size,
-      string Password
+      string Size
     ) : base(Name, Author, Keywords, Subjects, Path){
-          this.DateOfCreation = DateOfCreation;
-          this.DateOfChange = DateOfChange;
+          this.DateOfCreation = DateCreation;
+          this.DateOfChange = DateChange;
           this.Size = Size;
-          this.Password = Password;
         }
 
         public MS Excel(string Name, string Author, string[] Keywords, string Subjects, string Path)
@@ -66,14 +63,6 @@ namespace ConsoleApp{
             }
             base.Print("Размер файла: ", ParameterValue);
             ParameterValue = "";
-
-            if (this.Password == "") {
-              ParameterValue = "Не существует";
-            } else {
-              ParameterValue = this.Password;
-            }
-
-            base.Print("Введите пароль: ", ParameterValue);
         }
     }
 }
