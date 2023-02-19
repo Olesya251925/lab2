@@ -7,14 +7,14 @@ using System.Reflection.Emit;
 
 namespace ConsoleApp{
   class PDF {
-	public string DateCreation { get; set; }
+    public string DateCreation { get; set; }
     public string DateChange { get; set; }
     public string Size { get; set; }
     public string Password { get; set; }
     public PDF() { }
 
-	public PDF(
-	  string Name,
+    public PDF(
+      string Name,
       string Author,
       string [] Keywords,
       string Subjects,
@@ -30,16 +30,16 @@ namespace ConsoleApp{
           this.Password = Password;
         }
 		
-		public PDF(string Name) : base(Name) { }
+	public PDF(string Name) : base(Name) { }
         public override void PrintValues() {
-		  string ParameterValue = "";
+	  string ParameterValue = "";
 
-		  Console.Write("Тип файла: ");
-		  Console.WriteLine("PDF");
-          base.ValueParameter();
+	 Console.Write("Тип файла: ");
+	 Console.WriteLine("PDF");
+         base.ValueParameter();
 
-		if (this.DateCreation == "") {
-            ValueParameter = "Не существует";
+	if (this.DateCreation == "") {
+          ValueParameter = "Не существует";
         } else {
             ValueParameter = this.DateCreation;
           }
