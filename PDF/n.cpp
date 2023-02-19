@@ -21,13 +21,11 @@ namespace ConsoleApp{
       string Path,
       string DateCreation,
       string DateChange,
-      string Size,
-      string Password
+      string Size
     ) : base(Name, Author, Keywords, Subjects, Path){
-          this.DateOfCreation = DateOfCreation;
-          this.DateOfChange = DateOfChange;
+          this.DateOfCreation = DateCreation;
+          this.DateOfChange = DateChange;
           this.Size = Size;
-          this.Password = Password;
         }
 		
 	public PDF(string Name) : base(Name) { }
@@ -64,13 +62,6 @@ namespace ConsoleApp{
             
             base.Print("Размер файла: ", ParameterValue);
             ParameterValue = "";
-
-            if (this.Password == "") {
-              ParameterValue = "Не существует";
-            } else {
-              ParameterValue = this.Password;
-            }
-            base.Print("Введите пароль: ", ParameterValue);
         }
     }
 }
