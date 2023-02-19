@@ -10,7 +10,6 @@ namespace ConsoleApp{
     public string DateCreation { get; set; }
     public string DateChange { get; set; }
     public string Size { get; set; }
-    public string Password { get; set; }
     public MS Word() { }
 
     public MS Word(
@@ -64,13 +63,6 @@ namespace ConsoleApp{
             }
             base.Print("Размер файла: ", ParameterValue);
             ParameterValue = "";
-
-            if (this.Password == "") {
-              ParameterValue = "Не существует";
-            } else {
-              ParameterValue = this.Password;
-            }
-            base.Print("Введите пароль: ", ParameterValue);
         }
     }
 }
