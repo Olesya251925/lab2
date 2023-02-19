@@ -6,7 +6,7 @@ using System;
 using System.Reflection.Emit;
 
 namespace ConsoleApp{
-  class TXT : LabTwo{
+  class TXT : ElDocum {
     public string DateCreation { get; set; }
     public string Language { get; set; }
     public TXT() { }
@@ -16,8 +16,6 @@ namespace ConsoleApp{
 
     public TXT(string Name) : base(Name) { }
     public override void ValueParameter() {
-      string ParameterValue = "";
-
       Console.Write("Тип файла: ");
       Console.WriteLine("TXT");
       Console.WriteLine($"Дата создания: {DateCreation}\nЯзык: {Language}");
