@@ -6,7 +6,7 @@ using System;
 using System.Reflection.Emit;
 
 namespace ConsoleApp{
-  class HTML : LabTwo {
+  class HTML : ElDocum {
     public string DateCreation { get; set; }
     public string ElapsedTime { get; set; }
     public HTML() { }
@@ -17,7 +17,6 @@ namespace ConsoleApp{
       public HTML(string Name) : base(Name) { } 
 
       public override void PrintValues(){
-        string ValueParameter = "";
         Console.Write("Тип файла: ");
         Console.WriteLine("HTML");
         Console.WriteLine($"Дата создания: {DateCreation}\nЗатраченное время: {ElapsedTime}");
