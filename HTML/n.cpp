@@ -22,8 +22,8 @@ namespace ConsoleApp{
       string DateChange,
       string Size
     ) : base(Name, Author, Keywords, Subjects, Path){ //base используется для доступа к членам базового класса из производного класса
-          this.DateOfCreation = DateOfCreation;
-          this.DateOfChange = DateOfChange;
+          this.DateOfCreation = DateCreation;
+          this.DateOfChange = DateChange;
           this.Size = Size;
         }
   
