@@ -6,7 +6,7 @@ using System;
 using System.Reflection.Emit;
 
 namespace ConsoleApp{
-  class PDF : LabTwo {
+  class PDF : ElDocum {
     public string Title { get; set; }
     public string NumberPages { get; set; }
     public PDF() { }
@@ -17,8 +17,6 @@ namespace ConsoleApp{
     public PDF(string Name) : base(Name) { }
     
     public override void PrintValues() {
-      string ParameterValue = "";
-
       Console.Write("Тип файла: ");
       Console.WriteLine("PDF");
       Console.WriteLine($"Заголовок: {Title}\nКоличество страниц: {NumberPages}");
