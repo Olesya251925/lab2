@@ -11,27 +11,18 @@ namespace ConsoleApp{
     public int NumberRows { get; set; }
     public Excel() { }
 
-    public MS Excel(
-      string Name,
-      string Author,
-      string [] Keywords,
-      string Subjects,
-      string Path
-    ) : base(Name, Author, Keywords, Subjects, Path){
-        }
+    public MS Excel(string Name, string Author, string[] Keywords, string Subjects, string Path)
+      : base(Name, Author, Keywords, Subjects, Path) { }
 
-        public MS Excel(string Name, string Author, string[] Keywords, string Subjects, string Path)
-          : base(Name, Author, Keywords, Subjects, Path) { }
+    public MS Excel(string Name) : base(Name) { }
 
-        public MS Excel(string Name) : base(Name) { }
+    public override void ValueParameter() {
+      string ValueParameter = "";
 
-        public override void ValueParameter() {
-          string ValueParameter = "";
-
-          Console.Write("Тип файла: ");
-          Console.WriteLine("MS Excel");
-          Console.WriteLine($"Количество Столбцов: {NumberColumns}\nКоличество Строк: {NumberRows}");
-          Console.ReadKey();
-        }
+      Console.Write("Тип файла: ");
+      Console.WriteLine("MS Excel");
+      Console.WriteLine($"Количество Столбцов: {NumberColumns}\nКоличество Строк: {NumberRows}");
+      Console.ReadKey();
     }
+  }
 }
