@@ -6,7 +6,7 @@ using System;
 using System.Reflection.Emit;
 
 namespace ConsoleApp{
-  class MS Excel {
+  class MS Excel : LabTwo {
     public string DateCreation { get; set; }
     public string DateChange { get; set; }
     public string Size { get; set; }
