@@ -1,6 +1,6 @@
 /**************************
 * Лабораторная работа № 2 *
-*        MS Word          *
+*           PDF           *
 ***************************/
 using System;
 using System.Reflection.Emit;
@@ -10,7 +10,6 @@ namespace ConsoleApp{
     public string DateCreation { get; set; }
     public string DateChange { get; set; }
     public string Size { get; set; }
-    public string Password { get; set; }
     public PDF() { }
 
     public PDF(
