@@ -16,7 +16,7 @@ namespace ConsoleApp{
     public MS Excel(
       string Name,
       string Author,
-      string[] Keywords,
+      string [] Keywords,
       string Subjects,
       string Path,
       string DateCreation,
