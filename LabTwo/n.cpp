@@ -9,11 +9,11 @@ namespace ConsoleApp{
     public string Name { get; set; }
     public string Author { get; set; }
     public string [] Keywords { get; set; }
-    public string Theme { get; set; }
+    public string Subjects { get; set; }
     public string Path { get; set; }
 
-    public LabTwo(string Name, string Author, string[] Keywords, string Theme, string Path){
-      this.SetValues(Name, Author, Keywords, Theme, Path);
+    public LabTwo(string Name, string Author, string[] Keywords, string Subjects, string Path){
+      this.SetValues(Name, Author, Keywords, Subjects, Path);
 	}
 
     public LabTwo(string Name) => this.Name = Name;
