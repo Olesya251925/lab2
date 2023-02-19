@@ -1,3 +1,6 @@
+/**************************
+* Лабораторная работа № 2 *
+***************************/
 using System;
 namespace ConsoleApp {
   internal class Program {
@@ -10,7 +13,7 @@ namespace ConsoleApp {
         Authors = "Эрик Берн",
         Theme = "Психология",
         PathToFaile = "https://www.litres.ru/erik",
-        KeyWords = new string[] { "Игры; ", "Люди; ";},
+        KeyWords = new string[] { "Игры; ", "Люди; },
       };
       DocumentOutput(Information);
 
