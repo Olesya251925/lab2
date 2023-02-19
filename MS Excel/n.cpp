@@ -7,6 +7,8 @@ using System.Reflection.Emit;
 
 namespace ConsoleApp{
   class MS Excel : LabTwo {
+    public int NumberColumns { get; set; }
+    public int NumberRows { get; set; }
     public Excel() { }
 
     public MS Excel(
@@ -28,6 +30,8 @@ namespace ConsoleApp{
 
           Console.Write("Тип файла: ");
           Console.WriteLine("MS Excel");
+          Console.WriteLine($"Количество Столбцов: {NumberColumns}\nКоличество Строк: {NumberRows}");
+          Console.ReadKey();
         }
     }
 }
