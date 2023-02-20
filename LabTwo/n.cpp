@@ -2,32 +2,26 @@
 * Лабораторная работа № 2 *
 ***************************/
 using System;
-using System.Reflection.Emit;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ConsoleApp{
-  class LabTwo {
+namespace LabTwo{
+  public static class Singleton {
     public string Name { get; set; }
     public string Author { get; set; }
     public string [] Keywords { get; set; }
     public string Subjects { get; set; }
     public string Path { get; set; }
 
-    public LabTwo(string Name, string Author, string[] Keywords, string Subjects, string Path){
-      this.SetValues(Name, Author, Keywords, Subjects, Path);
+    public Singleton (string name, string author, string[] keywords, string subjects, string path){
+      Namt = name;
+      Author = author;
+      Keywords = keywords;
+      Subjects = subjects;
+      Path = path;
     }
-
-    public LabTwo(string Name) => this.Name = Name;
-    public LabTwo () { }
-
-    protected virtual void Print(string Parameter, string ParameterValue) {
-    }
-
-    public virtual void PrintValues() {
-      Print("Имя: ", Name);
-      Print("Автор: ", Author);
-      Print("Ключевые слова: ", ValueParameter);
-      Print("Тематика: ", Subjects);
-      Print("Путь к файлу: ", Path);
-    }
+    public static class OutputLines();
   }
 }
