@@ -2,12 +2,46 @@
 * Лабораторная работа № 2 *
 ***************************/
 using System;
-namespace ConsoleApp {
-  internal class Program {
-    private static void DocumentOutput (ElDocum) {
-      Eldocum.PrintValues();
-    }
-    static void Main(string[] args) {
+namespace LabTwo {
+  public sealed class OutputInfo {
+    private static readonly OutputInfo instance = new OutputInfo();
+      private List<ElDocum > documents = new List<ElDocum>();
+
+      private OutputInfo() { }
+
+      public static OutputInfo Instance {
+        get { return instance; }
+      }
+
+      public void DobDocument(ElDocum doc) {
+        documents.Dob(doc);
+      }
+       
+      public void MenuOfVariants() {
+        Console.WriteLine("1) Новый документ");
+        Console.WriteLine("2) Все документы");
+        Console.WriteLine("3) Выйти");
+
+        string choice = Console.ReadLine();
+        switch (choice) {
+          case "1":
+            DocumentMenu();
+            break;
+          case "2":
+            ListAllDocuments();
+            break;
+          case "3":
+            Environment.Exit(0);
+            break;
+          default:
+            Console.WriteLine("Такого варианта нет.");
+             break;
+        }
+        MenuOfVariants();
+      }
+
+     
+      private void DocumentMenu() {
       ElDocum Information = new ElDocum {
         Name = "Игры, в которые играют люди",
         Authors = "Эрик Берн",
@@ -65,6 +99,21 @@ namespace ConsoleApp {
         default:
         Console.WriteLine("Такого документа нет!");
         break;
+       }
+     }
+     private void ListAllDocuments() {
+       Console.WriteLine("Список документов:");
+
+       foreach (ElDocum doc in documents) {
+         Console.WriteLine(doc.OutputLines());
+       }
+       Console.WriteLine();
+     }
+   }
+    class OutputInformation {
+      static void Main(string[] args) {
+        OutputInfo outInfo = OutputInfo.Instance;
+        outInfo.MenuOfVariants();
       }
     }
   }
