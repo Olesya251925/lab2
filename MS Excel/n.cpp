@@ -16,7 +16,7 @@ namespace ConsoleApp{
 
     public MS Excel(string Name) : base(Name) { }
 
-    public override void ValueParameter() {
+    public override void OutputLines() {
       Console.Write("Тип файла: ");
       Console.WriteLine("MS Excel");
       Console.WriteLine($"Количество Столбцов: {NumberColumns}\nКоличество Строк: {NumberRows}");
