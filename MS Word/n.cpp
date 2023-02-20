@@ -17,7 +17,7 @@ namespace ConsoleApp{
 
     public MS Word(string Name) : base(Name) { }
 
-    public override void PrintValues() { 
+    public override void OutputLines() { 
        Console.Write("Тип файла: ");
        Console.WriteLine("DOC");
        Console.WriteLine($"Размер букв: {LetterSize}\nШрифт букв: {LetterFont}\nЗатраченное время: {ElapsedTime}");
