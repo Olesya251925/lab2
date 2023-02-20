@@ -15,7 +15,7 @@ namespace ConsoleApp{
       : base(Name, Author, Keywords, Subjects, Path) { }
 
     public TXT(string Name) : base(Name) { }
-    public override void ValueParameter() {
+    public override void OutputLines() {
       Console.Write("Тип файла: ");
       Console.WriteLine("TXT");
       Console.WriteLine($"Дата создания: {DateCreation}\nЯзык: {Language}");
