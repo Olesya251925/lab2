@@ -16,7 +16,7 @@ namespace ConsoleApp{
 
     public PDF(string Name) : base(Name) { }
     
-    public override void PrintValues() {
+    public override void OutputLines() {
       Console.Write("Тип файла: ");
       Console.WriteLine("PDF");
       Console.WriteLine($"Заголовок: {Title}\nКоличество страниц: {NumberPages}");
