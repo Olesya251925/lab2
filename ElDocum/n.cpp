@@ -17,7 +17,7 @@ namespace LabTwo {
         documents.Dob(doc);
       }
        
-      public void MenuOfVariants() {
+      public void MenuVariants() {
         Console.WriteLine("1) Новый документ");
         Console.WriteLine("2) Все документы");
         Console.WriteLine("3) Выйти");
@@ -37,7 +37,7 @@ namespace LabTwo {
             Console.WriteLine("Такого варианта нет.");
              break;
         }
-        MenuOfVariants();
+        MenuVariants();
       }
 
      
@@ -113,7 +113,7 @@ namespace LabTwo {
     class OutputInformation {
       static void Main(string[] args) {
         OutputInfo outInfo = OutputInfo.Instance;
-        outInfo.MenuOfVariants();
+        outInfo.MenuVariants();
       }
     }
   }
