@@ -16,7 +16,7 @@ namespace ConsoleApp{
 
       public HTML(string Name) : base(Name) { } 
 
-      public override void PrintValues(){
+      public override void OutputLines(){
         Console.Write("Тип файла: ");
         Console.WriteLine("HTML");
         Console.WriteLine($"Дата создания: {DateCreation}\nЗатраченное время: {ElapsedTime}");
