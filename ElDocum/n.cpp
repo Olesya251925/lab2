@@ -18,9 +18,9 @@ using System;
        }
 
        public void MenuVariants() {
-         Console.WriteLine("1) Новый документ");
-         Console.WriteLine("2) Все документы");
-         Console.WriteLine("3) Выйти");
+         Console.WriteLine("1 - Новый документ");
+         Console.WriteLine("2 - Все документы");
+         Console.WriteLine("3 - Выйти");
 
          string choice = Console.ReadLine();
          switch (choice) {
@@ -34,7 +34,7 @@ using System;
              Environment.Exit(0);
              break;
            default:
-             Console.WriteLine("Такого варианта нет.");
+             Console.WriteLine("Ошибка. Документ не существует");
               break;
          }
          MenuVariants();
@@ -96,7 +96,7 @@ using System;
          DocumentOutput(InformationHTML);
          break;
          default:
-         Console.WriteLine("Такого документа нет!");
+         Console.WriteLine("Данный документ не существует");
          break;
         }
       }
@@ -114,5 +114,5 @@ using System;
         OutputInfo outInfo = OutputInfo.Instance;
         outInfo.MenuVariants();
       }
-    }
+   }
 }
