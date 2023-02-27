@@ -28,7 +28,7 @@ using System;
             break;
           default:
           Console.WriteLine("Ошибка. Документ не существует");
-            break;
+          break;
         }
         MenuVariants();
       }
@@ -56,6 +56,7 @@ using System;
         };
         DocumentOutput(InformationWord);
         break;
+        Word Word = new Word();
          
         case "2":
         ElDocum InformationPDF = new PDF {
@@ -64,7 +65,8 @@ using System;
         };
         DocumentOutput(InformationPDF);
         break;
-         
+        Pdf Pdf = new Pdf(); 
+        
         case "3":
         ElDocum InformationExcel = new Excel {
           NumberColumns = 6,
@@ -72,16 +74,18 @@ using System;
         };
         DocumentOutput(InformationExcel);
         break;
-                 
-        case "4":
+        Excel Excel = new Excel();         
+        
+       case "4":
         ElDocum InformationTXT = new TXT {
           DateCreation = "15.09.2018",
           Language = "Русский",
         };
         DocumentOutput(InformationTXT);
         break;
-         
-        case "5":
+        Txt Txt = new Txt(); 
+        
+       case "5":
         ElDocum InformationHTML = new HTML {
           DateCreation = "18.02.2020",
           ElapsedTime = 156,
@@ -92,6 +96,7 @@ using System;
         Console.WriteLine("Данный документ не существует");
         break;
         }
+        Html Html = new Html();
       }
       private void ListAllDocuments() {
         Console.WriteLine("Список документов:");
